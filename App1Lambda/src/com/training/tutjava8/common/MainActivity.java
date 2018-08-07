@@ -2,6 +2,7 @@ package com.training.tutjava8.common;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import com.training.tutjava8.domain.Person;
 
@@ -20,6 +21,8 @@ public class MainActivity {
         personList.add(new Person("Tony Stark",40));
         personList.add(new Person("Banner",38));
         
+        List<Person> personList2 = personList.stream().map(p->new Person(p.getName(),p.getAge()+10)).collect(Collectors.toList());
+        System.out.println(personList2);
         System.out.println(personList.stream().mapToInt(Person::getAge).sum());
 	}
 }
