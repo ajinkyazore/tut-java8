@@ -13,12 +13,17 @@ public class MainActivity {
         personMap.put(2,new Person("Tony","Stark",40));
         personMap.put(3,new Person("Bruce","Banner",38));
         personMap.put(4,new Person("Bruce","Wayne",38));
+        personMap.put(4,new Person("Bruce","Warner",38));
 
         Person defaultPerson = new Person("Thanos","Titan",100);
         System.out.println(personMap.getOrDefault(12, defaultPerson));
         
         Person newPerson = new Person("Loki","Odinson",30);
         personMap.putIfAbsent(1, newPerson);
+        
+        System.out.println(personMap.get(1));
+        
+        personMap.replace(1, newPerson);
         
         System.out.println(personMap.get(1));
 	}
