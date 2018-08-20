@@ -1,0 +1,7 @@
+echo I dont know what I am doing with this javascript engine
+jjs
+var a =20;
+var b=45;
+var c = a+b;
+c
+
